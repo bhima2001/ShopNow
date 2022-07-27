@@ -27,14 +27,14 @@ function Header(){
         <AppBar position='fixed' sx={{bgcolor:'#D6D3C4'}}>
             <Typography variant='div' children='node' sx={{display:'flex'}}>
                 <Button variant='text' sx={{color:'black',fontSize:'1.5rem',marginRight:'10rem'}}>Ecommerce</Button>
-                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="http://localhost:3000">Home</Link></Typography>
-                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="http://localhost:3000/products">Products</Link></Typography>
-                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}>Contact</Typography>
-                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}>About</Typography>
+                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="/">Home</Link></Typography>
+                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="/products">Products</Link></Typography>
+                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="/contact">Contact</Link></Typography>
+                <Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem'}}><Link  style={{textDecoration:'none',color:'black'}} href="/about">About</Link></Typography>
                 <TextField id="standard-basic" placeholder="Search for product..." variant="standard" color="primary" onChange={(e)=>setKeyword(e.target.value)} sx={{color:'black',fontSize:'1.5rem',marginLeft:'15rem',marginTop:'1rem'}}/>
                 <Button variant='button' sx={{color:'black',fontSize:'1.5rem',margin:'0.38rem 2rem 0rem 1rem',cursor:'pointer'}} onClick={searchSubmitHandler}><MdSearch/></Button>
                 <Button  sx={{color:'black',fontSize:'1.5rem',margin:'1rem 1rem 0rem 0rem',cursor:'pointer'}} onClick={()=>navigate('/cart')}><ShoppingCartIcon/></Button>
-                {(isAuthenticated)?(<UserOptions user={user}/>):(<Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'1rem 0rem 0rem 1rem',cursor:'pointer'}}><Link style={{color:'black'}} href="http://localhost:3000/login"><AccountBoxIcon/></Link></Typography>)}
+                {(isAuthenticated)?(<UserOptions user={user}/>):(<Typography variant='subtitle1' sx={{color:'black',fontSize:'1.5rem',margin:'1rem 0rem 0rem 1rem',cursor:'pointer'}}><Link style={{color:'black'}} href="/login"><AccountBoxIcon/></Link></Typography>)}
             </Typography>
         </AppBar>
     )
